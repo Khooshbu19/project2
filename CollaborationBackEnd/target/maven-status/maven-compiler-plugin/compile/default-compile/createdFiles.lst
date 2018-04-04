@@ -1,0 +1,8 @@
+com\niit\CollaborationBackEnd\daoImpl\UserDaoImpl.class
+com\niit\CollaborationBackEnd\model\Blog.class
+com\niit\CollaborationBackEnd\dao\BlogDao.class
+com\niit\CollaborationBackEnd\model\User.class
+com\niit\CollaborationBackEnd\daoImpl\BlogDaoImpl.class
+com\niit\CollaborationBackEnd\hibernate\HibernateConfig.class
+com\niit\CollaborationBackEnd\App.class
+com\niit\CollaborationBackEnd\dao\UserDao.class
