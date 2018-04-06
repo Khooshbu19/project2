@@ -11,16 +11,16 @@ import javax.persistence.SequenceGenerator;
 import org.springframework.stereotype.Component;
 @Entity
 @Component
-@SequenceGenerator(name="jobIdseq",sequenceName="myjob_seq")
+@SequenceGenerator(name="job_seq",sequenceName="job_seq")
 public class Job {
 	@Id
-	@GeneratedValue(strategy=GenerationType.SEQUENCE,generator="jobseq")
+	@GeneratedValue(strategy=GenerationType.SEQUENCE,generator="job_seq")
 	 private int jobId;
 	private String company;
 	private int salary;
 	private String location;
 	private String jobDesc;
-	private Date lastDateApply;
+//	private Date lastDateApply;
 	public int getJobId() {
 		return jobId;
 	}
@@ -51,12 +51,12 @@ public class Job {
 	public void setJobDesc(String jobDesc) {
 		this.jobDesc = jobDesc;
 	}
-	public Date getLastDateApply() {
+	/*public Date getLastDateApply() {
 		return lastDateApply;
 	}
 	public void setLastDateApply(Date lastDateApply) {
 		this.lastDateApply = lastDateApply;
-	}
+	}*/
 
 
 

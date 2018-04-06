@@ -1,8 +1,8 @@
-
+/*
 package com.niit.CollaborationBackEnd.test;
 
 import org.junit.BeforeClass;
-
+import org.junit.Ignore;
 import org.junit.Test;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -26,7 +26,7 @@ public class UserDaoTest {
 		user = (User) context.getBean("user");
 
 	}
-
+	@Ignore
 	@Test
 	public void addUser() {
 		user.setU_username("Nishant");
@@ -36,4 +36,4 @@ public class UserDaoTest {
 
 	}
 
-}
+}*/

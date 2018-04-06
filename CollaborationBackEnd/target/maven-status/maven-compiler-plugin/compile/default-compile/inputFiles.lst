@@ -1,8 +1,13 @@
 C:\Users\Khooshbu\eclipse-workspace\CollaborationBackEnd\src\main\java\com\niit\CollaborationBackEnd\dao\BlogDao.java
 C:\Users\Khooshbu\eclipse-workspace\CollaborationBackEnd\src\main\java\com\niit\CollaborationBackEnd\dao\UserDao.java
 C:\Users\Khooshbu\eclipse-workspace\CollaborationBackEnd\src\main\java\com\niit\CollaborationBackEnd\daoImpl\UserDaoImpl.java
-C:\Users\Khooshbu\eclipse-workspace\CollaborationBackEnd\src\main\java\com\niit\CollaborationBackEnd\App.java
+C:\Users\Khooshbu\eclipse-workspace\CollaborationBackEnd\src\main\java\com\niit\CollaborationBackEnd\dao\JobDao.java
 C:\Users\Khooshbu\eclipse-workspace\CollaborationBackEnd\src\main\java\com\niit\CollaborationBackEnd\daoImpl\BlogDaoImpl.java
-C:\Users\Khooshbu\eclipse-workspace\CollaborationBackEnd\src\main\java\com\niit\CollaborationBackEnd\hibernate\HibernateConfig.java
 C:\Users\Khooshbu\eclipse-workspace\CollaborationBackEnd\src\main\java\com\niit\CollaborationBackEnd\model\Blog.java
+C:\Users\Khooshbu\eclipse-workspace\CollaborationBackEnd\src\main\java\com\niit\CollaborationBackEnd\model\BlogComment.java
+C:\Users\Khooshbu\eclipse-workspace\CollaborationBackEnd\src\main\java\com\niit\CollaborationBackEnd\model\Job.java
+C:\Users\Khooshbu\eclipse-workspace\CollaborationBackEnd\src\main\java\com\niit\CollaborationBackEnd\daoImpl\JobDaoImpl.java
+C:\Users\Khooshbu\eclipse-workspace\CollaborationBackEnd\src\main\java\com\niit\CollaborationBackEnd\App.java
+C:\Users\Khooshbu\eclipse-workspace\CollaborationBackEnd\src\main\java\com\niit\CollaborationBackEnd\hibernate\HibernateConfig.java
+C:\Users\Khooshbu\eclipse-workspace\CollaborationBackEnd\src\main\java\com\niit\CollaborationBackEnd\model\Forum.java
 C:\Users\Khooshbu\eclipse-workspace\CollaborationBackEnd\src\main\java\com\niit\CollaborationBackEnd\model\User.java

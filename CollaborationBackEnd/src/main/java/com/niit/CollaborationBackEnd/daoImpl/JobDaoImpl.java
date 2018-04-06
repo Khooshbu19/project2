@@ -39,4 +39,11 @@ public class JobDaoImpl implements JobDao {
 		return listJobs;
 	}
 
+	@Override
+	public Job getJob(int jobId) {
+	Session session=sessionFactory.openSession();
+	Job job=(Job) sessionFactory.getCurrentSession().get(Job.class, jobId);
+		return job;
+	}
+
 }

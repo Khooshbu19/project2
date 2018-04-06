@@ -17,7 +17,7 @@ import com.niit.CollaborationBackEnd.model.Blog;
 public class BlogController {
 	@Autowired
 	BlogDao blogDao;
-	@GetMapping("/showAllApprovedBlogs")
+/*	@GetMapping("/showAllApprovedBlogs")
 	public ResponseEntity<List<Blog>>showAllApprovedBlogs()
 		{
 			List<Blog>listBlogs=blogDao.listBlogs("----");
@@ -29,7 +29,7 @@ public class BlogController {
 			{
 				return new ResponseEntity<List<Blog>>(listBlogs,HttpStatus.INTERNAL_SERVER_ERROR);
 			}
-		}
+		}*/
 	@PostMapping("/addBlog")
 	public ResponseEntity<String> addBlog(@RequestBody Blog blog)
 	{

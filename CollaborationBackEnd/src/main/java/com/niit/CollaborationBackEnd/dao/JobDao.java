@@ -9,6 +9,7 @@ public interface JobDao {
 	public boolean delete(Job job);
 	public boolean update(Job job);
 	public List<Job>listAllJobs();
+	public Job getJob(int jobId);
 	
 
 }
