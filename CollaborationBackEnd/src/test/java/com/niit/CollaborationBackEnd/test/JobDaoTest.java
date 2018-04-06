@@ -1,4 +1,4 @@
-/*
+
 package com.niit.CollaborationBackEnd.test;
 
 import static org.junit.Assert.*;
@@ -14,6 +14,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import com.niit.CollaborationBackEnd.dao.JobDao;
 import com.niit.CollaborationBackEnd.hibernate.HibernateConfig;
 import com.niit.CollaborationBackEnd.model.Job;
+
+
+
 
 public class JobDaoTest {
 	
@@ -42,14 +45,13 @@ public class JobDaoTest {
 			jobDao.addJob(job);
 			
 		}
+
 		@Ignore
 		@Test
 		public void deleteJobTest()
 		{
 			job=jobDao.getJob(54);
-		
-			
-			assertTrue("problem in deletion",jobDao.delete(job));
+		assertTrue("problem in deletion",jobDao.delete(job));
 		}
 		
 		
@@ -62,19 +64,21 @@ public class JobDaoTest {
 			job.setLocation("Mumbai");
 			assertTrue("problem in updation",jobDao.update(job));
 		}
-		@Ignore
+	
 		@Test
 		public void listJobsTest()
 		{
 			List<Job> listJobs=jobDao.listAllJobs();
-			assertNotNull("problem in listingjob",listJobs);
+			
 			for(Job job:listJobs)
 			{
-				System.out.println("job description"+job.getJobDesc());
+				System.out.println("job description:-"+job.getJobDesc());
+				System.out.println("company:-"+job.getCompany());
+				System.out.println("job location"+job.getLocation());
 			}
 		}
 
 	}
 
-*/
+
 

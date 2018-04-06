@@ -32,14 +32,13 @@ public class JobDaoImpl implements JobDao {
 		return false;
 	}
 
+	@SuppressWarnings("unchecked")
 	public List<Job> listAllJobs() {
-		Session session=sessionFactory.openSession();
-		Query query=session.createQuery("from job");
-		List<Job> listJobs=query.list();
-		return listJobs;
+		return(List<Job>)sessionFactory.getCurrentSession().createQuery("from Job").list();
+		
 	}
 
-	@Override
+
 	public Job getJob(int jobId) {
 	Session session=sessionFactory.openSession();
 	Job job=(Job) sessionFactory.getCurrentSession().get(Job.class, jobId);

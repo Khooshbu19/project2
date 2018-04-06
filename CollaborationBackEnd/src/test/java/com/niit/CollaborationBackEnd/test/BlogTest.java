@@ -1,13 +1,22 @@
-
 package com.niit.CollaborationBackEnd.test;
+
+import static org.junit.Assert.*;
+
+
+import org.junit.Test;
+
+
+
 
 import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
-import org.junit.Test;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -37,7 +46,7 @@ public class BlogTest {
 		blog=(Blog)context.getBean("blog");
 		//System.out.println("abcd");
 	}
-	
+	@Ignore
 	@Test
 	public void addBlogTestCase() {
 		
@@ -49,21 +58,30 @@ public class BlogTest {
 		//blog.setB_status("A");
 		blogDao.addBlog(blog);
 		Assert.assertEquals(blog, true);
-		
-	}
+	}	
 	@Ignore
 	@Test
-	public void listBlogsByUserTest()
+	public void listAllBlogTest()
 	{
-		List<Blog>listBlogs=blogDao.listBlogs("nishant");
-		//assertTrue("problem in listing blogs",listBlogs.size()>0);
-		System.out.println(listBlogs);
+		List<Blog> listAllBlogs=blogDao.getlistAllBlogs();
+		for(Blog blog:listAllBlogs)
+		{
+			System.out.println(blog.getBlogContent()+":-");
+			System.out.println(blog.getBlogName()+":-");
+			System.out.println(blog.getLikes()+":-");
+		}
+	}
+	@Test
+	public void listBlogsTest()
+	{
+		List<Blog> listBlogs=blogDao.getlistBlogs("abcu");
 		for(Blog blog:listBlogs)
 		{
 			System.out.println(blog.getBlogName()+":-");
 			System.out.println(blog.getLoginname()+":-");
-			System.out.println(blog.getBlogContent()+":-");
+			System.out.println(blog.getLikes()+":-");
 		}
+		
 	}
 	@Ignore
 	@Test
@@ -72,8 +90,10 @@ public class BlogTest {
 		blog=blogDao.getBlog(51);
 		assertTrue("problem in Incrementof likes :",blogDao.incrementLike(blog));
 	}
-
-	
 	
 
-}
+}	
+	
+
+
+

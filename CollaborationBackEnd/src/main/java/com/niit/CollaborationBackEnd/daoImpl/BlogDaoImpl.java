@@ -2,6 +2,7 @@ package com.niit.CollaborationBackEnd.daoImpl;
 
 import java.util.List;
 
+
 import javax.transaction.Transactional;
 
 import org.hibernate.Query;
@@ -9,14 +10,14 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+
 
 import com.niit.CollaborationBackEnd.dao.BlogDao;
 import com.niit.CollaborationBackEnd.model.Blog;
 import com.niit.CollaborationBackEnd.model.BlogComment;
 
 @Transactional
-@EnableWebMvc
+
 @Repository("blogDao")
 public class BlogDaoImpl implements BlogDao {
 	@Autowired
@@ -39,7 +40,7 @@ public class BlogDaoImpl implements BlogDao {
 	}
 
 	@SuppressWarnings("deprecation")
-	public List<Blog> listBlogs(String u_username) {
+	public List<Blog> getlistBlogs(String u_username) {
 		Session session = sessionFactory.openSession();
 		Query query = session.createQuery("from Blog Where loginname=:u_username");
 		query.setParameter("u_username", u_username);
@@ -68,12 +69,13 @@ public class BlogDaoImpl implements BlogDao {
 		return blog;
 	}
 
-	public List<Blog> listAllBlogs() {
-		Session session = sessionFactory.openSession();
-		Query query = session.createQuery("from Blog");
-		List<Blog> listBlogs = query.list();
-		return listBlogs;
+	
+	@SuppressWarnings("unchecked")
+	public List<Blog> getlistAllBlogs() {
+		
+		return (List<Blog>) sessionFactory.getCurrentSession().createQuery("from Blog").list();
 	}
+
 
 	public boolean incrementLike(Blog blog) {
 		// blog.setB_status("");

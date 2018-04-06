@@ -9,11 +9,11 @@ public interface BlogDao {
 	public boolean addBlog(Blog blog);
 	public boolean deleteBlog(int blogId);
 	public boolean updateBlog(Blog blog);
-	public List<Blog> listBlogs(String u_username);
+	public List<Blog> getlistBlogs(String u_username);
 	public boolean approveBlog(Blog blog);
 	public boolean rejectBlog(Blog blog);
 	public Blog getBlog(int blogId);
-	public List<Blog>listAllBlogs();
+	public List<Blog> getlistAllBlogs();
 	public boolean incrementLike(Blog blog);
 	
 	public boolean addBlogComment(BlogComment blogComment);
