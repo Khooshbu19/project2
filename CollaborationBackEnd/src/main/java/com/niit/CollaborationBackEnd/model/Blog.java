@@ -6,7 +6,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import org.springframework.stereotype.Component;
 
@@ -22,11 +25,14 @@ public class Blog {
 	private	int blogId;
 	private	String blogName;
 	private String blogContent;
+	@Temporal(TemporalType.DATE)
 	@JsonFormat(shape=JsonFormat.Shape.STRING,pattern="dd-MM-yyyy")
 	private Date CreateDate;
 	private int likes;
-	private String loginname;
-	//private String b_status;
+	@ManyToOne
+	private User user;
+	
+	private String b_status;
 	public int getBlogId() {
 		return blogId;
 	}
@@ -59,18 +65,12 @@ public class Blog {
 	public void setLikes(int likes) {
 		this.likes = likes;
 	}
-	public String getLoginname() {
-		return loginname;
-	}
-	public void setLoginname(String loginname) {
-		this.loginname = loginname;
-	}
-	/*public String getB_status() {
+	public String getB_status() {
 		return b_status;
 	}
 	public void setB_status(String b_status) {
 		this.b_status = b_status;
-	}*/
+	}
 	
 	
 	

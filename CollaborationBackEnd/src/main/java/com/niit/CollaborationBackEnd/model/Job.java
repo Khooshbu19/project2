@@ -1,14 +1,20 @@
 package com.niit.CollaborationBackEnd.model;
-
 import java.util.Date;
 
 import javax.persistence.Entity;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import org.springframework.stereotype.Component;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+
 @Entity
 @Component
 @SequenceGenerator(name="job_seq",sequenceName="job_seq")
@@ -20,7 +26,9 @@ public class Job {
 	private int salary;
 	private String location;
 	private String jobDesc;
-//	private Date lastDateApply;
+	@Temporal(TemporalType.DATE)
+	@JsonFormat(shape=JsonFormat.Shape.STRING,pattern="dd-MM-yyyy")
+	private Date lastDateApply;
 	public int getJobId() {
 		return jobId;
 	}
@@ -51,12 +59,12 @@ public class Job {
 	public void setJobDesc(String jobDesc) {
 		this.jobDesc = jobDesc;
 	}
-	/*public Date getLastDateApply() {
+	public Date getLastDateApply() {
 		return lastDateApply;
 	}
 	public void setLastDateApply(Date lastDateApply) {
 		this.lastDateApply = lastDateApply;
-	}*/
+	}
 
 
 

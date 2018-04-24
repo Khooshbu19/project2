@@ -18,7 +18,7 @@ public class User {
 		private String u_confirmPassword;
 		private String u_firstName;
 		private String u_lastName;
-		//private String u_status;
+		private String u_status;
 		public String getU_username() {
 			return u_username;
 		}
@@ -49,13 +49,13 @@ public class User {
 		public void setU_lastName(String u_lastName) {
 			this.u_lastName = u_lastName;
 		}
-		/*public String getU_status() {
+		public String getU_status() {
 			return u_status;
 		}
 		public void setU_status(String u_status) {
 			this.u_status = u_status;
 		}
-		*/
+		
 	
 	
 	}

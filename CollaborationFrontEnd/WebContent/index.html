@@ -1,26 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="myApp">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
-<script src="RouteConfig.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="routeconfig.js"></script>
 <head>
 <title></title>
 </head>
-<body ng-app="myApp">
-<table width="100%">
-<tr>
-<td>Collaboration FrontEnd</td>
-<td></td>
-</tr>
-<tr>
-<td colspan="2">
+<body >
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Collaboration FrontEnd</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#!blog">Blog</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#blog">Blog<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Page 1-1</a></li>
+          <li><a href="#">Page 1-2</a></li>
+          <li><a href="#">Page 1-3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Page 2</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#!register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      <li><a href="#!login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+ <!--    <ng-show="currentUser.role=='ROLEADMIN'"><a href="#!adminBlog">BlogApproval -->
+  </div>
+</nav>
 
-<a href="#/login">Login</a>
 
-</td>
-</tr>
-</table>
-<div ng-view>
+<div data-ng-view="">
+</div>
+<script src="C_blog/BlogController.js" ></script>
+<script src="C_user/UserController.js"></script>
 </body>
 </html>

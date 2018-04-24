@@ -1,0 +1,14 @@
+<div class="Container" ng-controller="JobController">
+<table class="table">
+<tr>
+<td> Designation</td>
+<td>company</td>
+<td>salary</td>
+<td>location</td>
+<td>last Date of Apply</td>
+</tr>
+<tr ng-repete="job in all job Data">
+
+<td>{{job.jobDesignation}}</td>
+<td>{{job.job}}</td>
+</tr>

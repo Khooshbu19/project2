@@ -3,15 +3,15 @@ package com.niit.CollaborationBackEnd.daoImpl;
 import java.util.List;
 
 
+
 import javax.transaction.Transactional;
 
-import org.hibernate.Query;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
-
 import com.niit.CollaborationBackEnd.dao.BlogDao;
 import com.niit.CollaborationBackEnd.model.Blog;
 import com.niit.CollaborationBackEnd.model.BlogComment;
@@ -39,15 +39,18 @@ public class BlogDaoImpl implements BlogDao {
 		return true;
 	}
 
-	@SuppressWarnings("deprecation")
+	@SuppressWarnings({  "unchecked", "rawtypes" })
 	public List<Blog> getlistBlogs(String u_username) {
-		Session session = sessionFactory.openSession();
-		Query query = session.createQuery("from Blog Where loginname=:u_username");
-		query.setParameter("u_username", u_username);
 		
-		List<Blog> listBlogs = query.list();
-		System.out.println(listBlogs);
-		return listBlogs;
+		Session session=sessionFactory.openSession();
+		Query query=session.createQuery("from Blog where loginname=:u_username");
+		query.setParameter("u_username", u_username);
+		List<Blog>listBlog=query.list();
+
+
+		
+		
+		return listBlog;
 	}
 
 	public boolean approveBlog(Blog blog) {
@@ -58,7 +61,7 @@ public class BlogDaoImpl implements BlogDao {
 	}
 
 	public boolean rejectBlog(Blog blog) {
-		// blog.setStatus("na");
+		// blog.setStatus("NA");
 		sessionFactory.getCurrentSession().update(blog);
 		return true;
 	}

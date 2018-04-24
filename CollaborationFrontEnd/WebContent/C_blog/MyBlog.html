@@ -1,0 +1,15 @@
+<div class="container" ng-controller="BlogController">
+<table class="table">
+<tr>
+<td>Blog Name</td>
+<td>Blog Content</td>
+</tr>
+<tr>
+<tr ng-repeate="blog in all Blogdata">
+<td ng-show="blog.u_username==currentUser">{{blog.blogName}}</td>
+<td ng-show="blog.u_username==currentUser">{{blog.blogContent}}</td>
+
+
+</tr>
+</table>
+</div>
